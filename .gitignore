@@ -8,10 +8,6 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-*.pt
-*.pth
-*.ckptgit
-model/
 data/
 dataset/
 
