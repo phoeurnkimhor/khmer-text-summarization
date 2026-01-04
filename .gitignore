@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+*.pt
+*.pth
+*.ckptgit
+data/
+dataset/
+
+*.log
+
+.vscode/
+.idea/
