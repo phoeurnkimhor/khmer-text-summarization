@@ -20,7 +20,6 @@ The system is applied to news articles, educational content, and social media po
 
   * mT5 and mBART (`facebook/mbart-large-50`)
   * KhmerBERT
-  * LoRA adapters for **memory-efficient fine-tuning**
 
 * **Evaluation:** ROUGE scores and manual inspection
 
