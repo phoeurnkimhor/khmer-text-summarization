@@ -1,0 +1,84 @@
+
+================================================================================
+KHMER ABSTRACTIVE SUMMARIZATION - FINAL REPORT
+================================================================================
+
+DATASET INFORMATION
+--------------------------------------------------------------------------------
+Total samples:        12850
+Train samples:        10280
+Validation samples:   1285
+Test samples:         1285
+Evaluated samples:    50
+
+MODEL ARCHITECTURE
+--------------------------------------------------------------------------------
+Encoder:              xlm-roberta-base
+Decoder layers:       6
+Attention heads:      12
+Hidden size:          768
+Total parameters:     384,061,184
+Trainable parameters: 384,061,184
+Pointer-generator:    Disabled
+
+TRAINING CONFIGURATION
+--------------------------------------------------------------------------------
+Epochs:               10
+Batch size:           12
+Gradient accum:       4
+Learning rate:        5e-06
+Encoder LR:           1e-06
+Warmup ratio:         0.3
+Mixed precision:      Enabled (FP16)
+
+TRAINING RESULTS
+--------------------------------------------------------------------------------
+Best epoch:           10
+Best val loss:        5.0109
+Final train loss:     4.8764
+Final val loss:       5.0109
+
+EVALUATION RESULTS
+--------------------------------------------------------------------------------
+chrF++:               11.32
+BERTScore F1:         0.7774
+BERTScore Precision:  0.7733
+BERTScore Recall:     0.7819
+
+Avg pred length:      252.0 chars
+Avg ref length:       87.7 chars
+Compression ratio:    20.75%
+Length ratio:         3.42
+
+Novel 3-grams:        58.01%
+Novel 5-grams:        84.33%
+
+ROUGE SCORES:
+--------------------------------------------------------------------------------
+
+ROUGE-1 average:      59.63
+ROUGE-2 average:      24.31
+ROUGE-3 average:      11.19
+ROUGE-L average:      24.53
+
+Generation time:      0.00s per sample
+
+ERROR ANALYSIS
+--------------------------------------------------------------------------------
+Empty outputs:        0 (0.0%)
+Too short:            2 (4.0%)
+Too long:             37 (74.0%)
+Repetitive:           28 (56.0%)
+Low quality:          48 (96.0%)
+
+OUTPUT FILES
+--------------------------------------------------------------------------------
+Model checkpoint:     khmer_summarizer_output/best_model.pt
+Training history:     khmer_summarizer_output/training_history.json
+Evaluation results:   khmer_summarizer_output/evaluation_results.json
+Test predictions:     khmer_summarizer_output/test_predictions.csv
+Human eval sample:    khmer_summarizer_output/human_eval_sample_50.csv
+Production model:     khmer_summarizer_output/production_model/
+Training curve:       khmer_summarizer_output/training_curve.png
+
+================================================================================
